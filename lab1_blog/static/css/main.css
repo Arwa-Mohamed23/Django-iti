@@ -1,0 +1,30 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.site-title a {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h1,p {
+  color: #663263;
+}
+
+

@@ -1,0 +1,145 @@
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding-top: 20px;
+  }
+  
+  .post-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    text-align: center;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .post-card h2 {
+    font-size: 1.2rem;
+    padding: 10px;
+    color: #663263;
+  }
+  
+  .post-details {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-details p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #663263;
+    text-decoration: none;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
+  .post-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .comment {
+    background-color: #f0f8ff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 5px solid #663263;
+  }
+  
+  .comments {
+    margin-top: 20px;
+  }
+  
+  ul {
+    list-style: disc inside;
+    padding-left: 20px;
+  }
+
+  
+  .author-profile-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.author-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.author-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #dbcae2;
+}
+
+.author-img.placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: 3px solid #dbcae2;
+}
+
+.author-info {
+  flex: 1;
+  color: #663263;
+}
+
+.author-posts h3 {
+  margin-top: 10px;
+  color: #663263;
+}
+
+.author-posts ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.author-posts li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.author-posts li a, .author-name {
+  color: #663263;
+  font-weight: 500;
+}
+
+.author-posts li a:hover , .author-name:hover {
+  text-decoration: underline;
+}
+
+  

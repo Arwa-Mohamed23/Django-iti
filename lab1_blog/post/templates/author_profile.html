@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Author Profile{% endblock %}
+
+{% block content %}
+<div class="author-profile-card">
+  <div class="author-header">
+    {% if author.image %}
+      <img src="{{ author.image.url }}" alt="{{ author.first_name }}" class="author-img">
+    {% else %}
+      <div class="author-img placeholder">No Image</div>
+    {% endif %}
+    <div class="author-info">
+      <h2>{{ author.first_name }} {{ author.last_name }}</h2>
+      <p><strong>Email:</strong> {{ author.email }}</p>
+      <p><strong>Phone:</strong> {{ author.phone_number }}</p>
+    </div>
+  </div>
+
+  <div class="author-posts">
+    <h3>Posts by {{ author.first_name }} ({{ posts.count }})</h3>
+    <ul>
+      {% for post in posts %}
+        <li><a href="{% url 'post_details' post.id %}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}

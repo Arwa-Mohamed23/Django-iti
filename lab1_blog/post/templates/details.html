@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Post Details{% endblock %}
+{% block content %}
+  <div class="post-details">
+    <h1>{{ post.title }}</h1>
+    <p><strong>Posted on:</strong> {{ post.created_at|date:"F j, Y" }}</p>
+    <p><strong>Author:</strong> 
+        <a class="author-name" href="{% url 'author_profile' post.author.id %}">
+            {{ post.author.first_name }} {{ post.author.last_name }}
+        </a>
+    </p>
+    {% if post.image %}
+        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="post-img">
+    {% endif %}
+    <p>{{ post.content }}</p>
+
+    <h3>Comments</h3>
+    <div class="comments">
+      {% for comment in post.comments.all %}
+          <div class="comment">
+              <p><strong>{{ comment.posted_by }}:</strong> {{ comment.content }}</p>
+          </div>
+      {% empty %}
+          <p>No comments yet.</p>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
